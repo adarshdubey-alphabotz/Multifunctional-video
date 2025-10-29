@@ -1,6 +1,6 @@
-
 # handlers_start.py
-from pyrogram import Client, filters
+from bot_main import app
+from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot_config import DEMO_TEXT
 
@@ -12,7 +12,7 @@ def main_keyboard():
          InlineKeyboardButton("Watermark", callback_data="watermark")]
     ])
 
-@Client.on_message(filters.command(["start", "help"]))
+@app.on_message(filters.command(["start", "help"]))
 def start_handler(client, message):
     msg = ("👋 Welcome! Choose a tool below.\n"
            "Demo and examples at each step.")
