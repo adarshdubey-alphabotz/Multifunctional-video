@@ -10,8 +10,7 @@ users = {}
 def merge_callback(client, callback_query):
     users[callback_query.from_user.id] = {"mode": "wait_base"}
     callback_query.message.reply_text(
-        DEMO_TEXT["merge"] + "
-Send base video first.")
+        DEMO_TEXT["merge"] + "Send base video first.")
 
 @Client.on_message(filters.video)
 def merge_video_handler(client, message):
