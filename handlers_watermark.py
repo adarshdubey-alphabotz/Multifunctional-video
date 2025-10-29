@@ -12,8 +12,7 @@ users = {}
 def wm_callback(client, callback_query):
     users[callback_query.from_user.id] = {"mode": "wait_video"}
     callback_query.message.reply_text(
-        DEMO_TEXT["watermark"] + "
-Send your video file.")
+        DEMO_TEXT["watermark"] + "Send your video file.")
 
 @Client.on_message(filters.video)
 def wm_video_handler(client, message):
