@@ -1,4 +1,4 @@
-# utils_video.py
+#!/usr/bin/env python3
 """
 Updated Multifunctional Video Utility Script
 Compatible with Python 3.8+
