@@ -1,3 +1,4 @@
+
 # handlers_start.py
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -13,7 +14,6 @@ def main_keyboard():
 
 @Client.on_message(filters.command(["start", "help"]))
 def start_handler(client, message):
-    msg = ("👋 Welcome! Choose a tool below.
-"
+    msg = ("👋 Welcome! Choose a tool below.\n"
            "Demo and examples at each step.")
     message.reply_text(msg, reply_markup=main_keyboard())
